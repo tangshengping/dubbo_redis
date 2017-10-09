@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hz</groupId>
+  <artifactId>dubbo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>dubbo</name>
+  <url>http://maven.apache.org</url>
+  <parent>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>1.5.2.RELEASE</version>
+  </parent>
+  <modules>
+  	<module>dubbo-util</module>
+  	<module>dubbo-zstj</module>
+  	<module>dubbo-market</module>
+  	<module>dubbo-rpc</module>
+  	<module>dubbo-test</module>
+  </modules>
+  
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <java.version>1.7</java.version>
+      <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
+  </properties>
+
+  <!--申明依赖关系-->
+  <dependencies>
+  
+  	 <!-- 支持全栈式Web开发，包括Tomcat和spring-webmvc。 -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-web</artifactId>
+     </dependency>
+
+	 <!-- 支持常规的测试依赖，包括JUnit、Hamcrest、Mockito以及spring-test模块 -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+         <scope>test</scope>
+     </dependency> 
+        
+     <!-- 引入了Spring Boot默认的HTTP引擎Tomcat -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-tomcat</artifactId>
+         <scope>provided</scope>
+     </dependency>
+	 
+	 <!-- rabbitmq -->
+	 <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-amqp</artifactId>
+     </dependency>   
+     
+     <!-- 操作redis -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-redis</artifactId>
+	 </dependency>
+	 
+  </dependencies>
+  
+  <build>
+    <finalName>dubbo</finalName>
+    <plugins>
+        <!--配置Jetty插件-->
+        <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>maven-jetty-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </build>
+</project>

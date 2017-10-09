@@ -1,0 +1,10 @@
+spring:
+  #mongo配置
+    data:
+      mongodb:
+        apiLog:
+          database: ApiLogTest
+          uri: 10.50.50.24:27017
+        mall:
+          database: ZSTJ-MALL-Test
+          uri: 10.50.50.24:27017

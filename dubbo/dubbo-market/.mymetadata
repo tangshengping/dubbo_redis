@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="dubbo-market"
+  id="myeclipse.1505894612628"
+  context-root="/dubbo"
+  j2ee-spec="1.7"
+  archive="dubbo-market.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

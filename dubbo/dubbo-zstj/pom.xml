@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>dubbo</artifactId>
+    <groupId>com.hz</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>dubbo-zstj</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+     
+     <!-- 项目包之间的依赖 -->
+     <dependency>
+	      <groupId>com.hz</groupId>
+	      <artifactId>dubbo-util</artifactId>
+	      <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+     <dependency>
+	      <groupId>com.hz</groupId>
+	      <artifactId>dubbo-rpc</artifactId>
+	      <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+
+     <!-- Spring Boot Dubbo 依赖 -->
+     <dependency>
+         <groupId>io.dubbo.springboot</groupId>
+         <artifactId>spring-boot-starter-dubbo</artifactId>
+         <version>${dubbo-spring-boot}</version>
+     </dependency>
+
+	 <!-- 支持JDBC数据库  -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-jdbc</artifactId>
+     </dependency>
+        
+     <!-- mysql -->
+     <dependency>
+	     <groupId>mysql</groupId>
+	     <artifactId>mysql-connector-java</artifactId>
+	     <scope>runtime</scope>
+	 </dependency>
+	
+	 <!--导入mybatis-->
+	 <dependency>
+	     <groupId>org.mybatis.spring.boot</groupId>
+	     <artifactId>mybatis-spring-boot-starter</artifactId>
+	     <version>1.1.1</version>
+	 </dependency>
+	 
+	 <!--分页插件-->  
+	 <dependency>  
+	      <groupId>com.github.pagehelper</groupId>  
+	      <artifactId>pagehelper-spring-boot-starter</artifactId>  
+	      <version>1.0.0</version>  
+	 </dependency> 
+	 
+	 <!-- 操作mangodb -->
+	 <dependency>
+		 <groupId>org.springframework.boot</groupId>
+		 <artifactId>spring-boot-starter-data-mongodb</artifactId>
+	 </dependency>
+	 <!--Lombok - 是一个可以通过简单的注解形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，
+		   通过使用对应的注解，可以在编译源码的时候生成对应的方法。
+		   简单试了以下这个工具还挺好玩的，加上注解我们就不用手动写 getter\setter、构建方式类似的代码了。-->
+	 <dependency>
+		 <groupId>org.projectlombok</groupId>
+		 <artifactId>lombok</artifactId>
+	 </dependency>
+	 <!--spring-boot-autoconfigure - 就是spring boot的自动化配置-->
+	 <dependency>
+	 	 <groupId>org.springframework.boot</groupId>
+	 	 <artifactId>spring-boot-autoconfigure</artifactId>
+	 </dependency>
+  
+  </dependencies>
+  
+  
+  <build/>
+</project>
